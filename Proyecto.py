@@ -40,10 +40,6 @@ def derivada_por_definicion(f_numerica, punto, h=1e-7): #se usa h=1e-7 como apro
 
 
 def evaluacion_en_punto(funcion_simbolica, derivada_simbolica):
-    """
-    Pide al usuario un punto y calcula la derivada en ese punto
-    usando el método numérico para compararlo con el resultado exacto.
-    """
     print("\n--- 2. Evaluación de la Derivada en un Punto ---")
     
     try:
