@@ -32,7 +32,7 @@ def operaciones_simbolicas():
         print("Asegúrate de usar la sintaxis correcta de Python (ej. 'x**2' en lugar de 'x^2').")
         return None, None
 
-def derivada_por_definicion(f_numerica, punto, h=1e-7):
+def derivada_por_definicion(f_numerica, punto, h=1e-7): #se usa h=1e-7 como aproximacion al 0 
     """
     Calcula la derivada en un punto usando la fórmula de la diferencia central.
     """
@@ -50,7 +50,7 @@ def evaluacion_en_punto(funcion_simbolica, derivada_simbolica):
         punto_eval = float(input("Introduce el valor de x donde quieres evaluar la derivada: "))
         
         x = sp.symbols('x')
-        f_numerica = sp.lambdify(x, funcion_simbolica, 'numpy')
+        f_numerica = sp.lambdify(x, funcion_simbolica, 'numpy') 
         
         valor_derivada_numerica = derivada_por_definicion(f_numerica, punto_eval)
         print(f"Resultado numérico (por definición) en x={punto_eval}: {valor_derivada_numerica:.6f}")
