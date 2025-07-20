@@ -50,7 +50,7 @@ def evaluacion_en_punto(funcion_simbolica, derivada_simbolica):
         punto_eval = float(input("Introduce el valor de x donde quieres evaluar la derivada: "))
         
         x = sp.symbols('x')
-        f_numerica = sp.lambdify(x, funcion_simbolica, 'numpy') 
+        f_numerica = sp.lambdify(x, funcion_simbolica, 'numpy') #combierte funcion simbolica a numerica 
         
         valor_derivada_numerica = derivada_por_definicion(f_numerica, punto_eval)
         print(f"Resultado numérico (por definición) en x={punto_eval}: {valor_derivada_numerica:.6f}")
